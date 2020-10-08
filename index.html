@@ -13,16 +13,35 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-md-12 jumbotron text-center">
+      <div class="col-md-12 jumbotron text-center" style="background-image: url(/images/jumbotron_image.jpg); 
+                                                          background-repeat: no-repeat;
+                                                          background-position: center;
+                                                          background-size: cover;
+                                                          font-variant: small-caps;
+                                                          color:yellow;
+                                                          max-height: 300px;">
         <h1>Belly Button Biodiversity Dashboard</h1>
         <p>Use the interactive charts below to explore the dataset</p>
       </div>
     </div>
     <div class="row">
+      <div class="col-md-12">
+        <h4><b>Dashboard Overview</b></h4>
+        <p>The human body is source of thousands of types of bacteria and different parts of the body harbour different species.
+          For example, bacteria found in a person's gut is not same as bacteria found on person's eyelashes. Bacterial species could even vary from the same location for different individuals. 
+        </p>
+          <p>
+          One such study was done on bacterial species collected from navel area from 153 people. To keep the identity private, each of these individuals were provided an ID number.
+          The following dashboards are created for study participants and researchers to see which bacterial species reside in participant's navel.
+        </p>
+          <p>From the dropdown below, select an ID number for a study participant to view various information on the participant and their navel bacterial information.</p>
+          <br><br>
+      </div>
+    </div>
+    <div class="row">
       <div class="col-md-2">
         <div class="well">
-          <h5>Test Subject ID No.:</h5>
-          <!-- <select id="selDataset"></select> -->
+          <h5>Participant ID No.:</h5>
           <select id="selDataset" onchange="optionChanged(this.value)"></select>
         </div>
         <div class="panel panel-primary">
@@ -34,14 +53,29 @@
       </div>
       <div class="col-md-5">
         <div id="bar"></div>
+        <div>The bar chart displays the top 10 bacterial species (OTUs) for the selected participant ID. <br>
+              Hover over each bar to know the names of the bacterial species displayed as OTUs.
+        </div>
       </div>
       <div class="col-md-5">
         <div id="gauge"></div>
+        <div>The Gauge chart displays the weekly washing frequency's value. The black indicator bar display the value as a measure from 0-10 on the progress bar in the gauge chart when an participant ID is selected.
+          
+        </div>
       </div>
     </div>
     <div class="row">
+      <div class="col-md-12"><p></p>
+      </div>
+    </div>    
+    <div class="row">
       <div class="col-md-12">
         <div id="bubble"></div>
+    </div>
+    </div class="row">
+      <div class="col-md-12">
+        The bubble chart displays all the bacterial species collected for the selected participant ID. 
+        The bubble sizes are indicative of the sample size for each bacteria specie. 
       </div>
     </div>
   </div>
