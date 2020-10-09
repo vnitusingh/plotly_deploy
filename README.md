@@ -18,20 +18,22 @@ When the page is first loaded, the dashboard displays data for first participant
 
 ![](images/index_page.png)
 
-There are 4 areas that display participant information. 
+Let's look at the dashboard for a sample user. 
 
-Here is data snippet for participant ID: 940
+Data snippet for participant ID: 940
 
     {
-    "names":["940"],
-    "metadata":[{"id": 940, "ethnicity": "Caucasian", "gender": "F", "age": 24.0, "location": "Beaufort/NC", "bbtype": "I", "wfreq": 2.0}],
+    "names":["940,..."],
+    "metadata":[{"id": 940, "ethnicity": "Caucasian", "gender": "F", "age": 24.0, "location": "Beaufort/NC", "bbtype": "I", "wfreq": 2.0},...],
     "samples":[{"id": "940", 
                 "otu_ids": [1167, 2859,... ], 
                 "sample_values": [163, 126, ...], 
                 "otu_labels": ["Bacteria;Bacteroidetes;Bacteroidia;Bacteroidales;Porphyromonadaceae;Porphyromonas", "Bacteria;Firmicutes;Clostridia;Clostridiales;IncertaeSedisXI;...]
-             }]        
+             },...],        
     } 
 
+
+There are 4 areas that display participant information. 
 
 1. ***Demographic Information:*** Displays demographic information of the participant like age, ethnicity, location etc.
     > * Used value from 'metadata' list to obtain demographic information.
